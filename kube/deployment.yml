@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: puntos
+  namespace: default
+  labels:
+    app: puntos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: puntos
+  template:
+    metadata:
+      labels:
+        app: puntos
+    spec:
+      containers:
+        - name: nehuen-labs-node
+          image: donkanmcleod/public:nehuen-labs-node
+          ports:
+            - containerPort: 3000
+              name: http

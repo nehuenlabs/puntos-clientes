@@ -1,0 +1,46 @@
+
+POST http://localhost:3000/puntos HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "correo",
+    "puntosTienda": [
+        {
+            "tienda": "tienda1",
+            "puntos": 0
+        },
+        {
+            "tienda": "tienda2",
+            "puntos": 50000
+        }
+    ]
+}
+
+###
+
+PUT http://localhost:3000/puntos/correo2 HTTP/1.1
+Content-Type: application/json
+
+{
+    "correo": "correo",
+    "puntosTienda": [
+        {
+            "tienda": "tienda1",
+            "puntos": 1000
+        },
+        {
+            "tienda": "tienda2",
+            "puntos": -50000
+        }
+    ]
+}
+
+###
+
+GET http://localhost:3000/puntos/correo HTTP/1.1
+
+###
+
+GET http://localhost:3000/abcdefg HTTP/1.1
+
+###
